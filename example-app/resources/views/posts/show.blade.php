@@ -1,6 +1,17 @@
+
+
+<x-layout>
+
+    <h1>{{ $post }}</h1>
+        {{-- <p class="back-link"><a href="/">Back</a></p> --}}
+        {{-- <p class="back-link"><a href="/">Back</a></p> --}}
+    <p class="back-link"><a href="{{ route('posts.index')}}">Back</a></p>
+
+</x-layout>
+
 {{-- <h1>Hello World!!!</h1> --}}
 
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +22,11 @@
 <body>
 
     <div class="container">
+
         <h1>{{ $post }}</h1>
-        {{-- <p class="back-link"><a href="/">Back</a></p> --}}
-        {{-- <p class="back-link"><a href="/">Back</a></p> --}}
         <p class="back-link"><a href="{{ route('posts.index')}}">Back</a></p>
 
-
-    </div>  
+    </div>
 
 </body>
-</html>
+</html> --}}
