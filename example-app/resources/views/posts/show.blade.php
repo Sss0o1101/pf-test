@@ -2,6 +2,10 @@
 
 <x-layout>
 
+    <x-slot:title>
+       {{ $post }} | My latest App
+    </x-slot:title>
+
     <h1>{{ $post }}</h1>
         {{-- <p class="back-link"><a href="/">Back</a></p> --}}
         {{-- <p class="back-link"><a href="/">Back</a></p> --}}
