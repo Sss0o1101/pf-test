@@ -19,7 +19,9 @@
 
             @forelse ($posts as $index => $post)
                 <li>
-                    <a href="/posts/{{$index}}">{{ $post }}</a>
+                    {{-- <a href="/posts/{{$index}}">{{ $post }}</a> --}}
+                    {{-- <a href="{{ route('posts.show', ['id' => $index]) }}">{{ $post }}</a> --}}
+                    <a href="{{ route('posts.show', $index) }}">{{ $post }}</a>
                 </li>
             @empty
                 <li>No posts found!</li>
