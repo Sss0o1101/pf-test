@@ -12,8 +12,12 @@
 
     <div class="container">
         <h1>{{ $post }}</h1>
+        {{-- <p class="back-link"><a href="/">Back</a></p> --}}
+        {{-- <p class="back-link"><a href="/">Back</a></p> --}}
+        <p class="back-link"><a href="{{ route('posts.index')}}">Back</a></p>
 
-    </div>
+
+    </div>  
 
 </body>
 </html>
