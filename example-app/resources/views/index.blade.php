@@ -2,6 +2,10 @@
 
 <x-layout>
 
+    <x-slot:title>
+        My latest App
+    </x-slot:title>
+
     <h1>Posts</h1>
         <ul>
             {{-- @foreach ($posts as $post)
