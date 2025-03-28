@@ -3,12 +3,13 @@
 <x-layout>
 
     <x-slot:title>
-       {{ $post }} | My latest App
+       {{ $post->title }} | My latest App
     </x-slot:title>
 
-    <h1>{{ $post }}</h1>
+    <h1>{{ $post->title }}</h1>
         {{-- <p class="back-link"><a href="/">Back</a></p> --}}
         {{-- <p class="back-link"><a href="/">Back</a></p> --}}
+        <p>{{ $post->body }}</p>
     <p class="back-link"><a href="{{ route('posts.index')}}">Back</a></p>
 
 </x-layout>
