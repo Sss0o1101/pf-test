@@ -76,6 +76,16 @@ class PostController extends Controller
     }
 
 
+    public function destroy(Post $post) {
+        $post->delete();
+        return redirect()->route('posts.index');
+    }
+
+
+    // public function confirm(Post $post) {
+    //     return view('posts.confirm')->with(['post' => $post]);
+    // }
+
 
 
 
