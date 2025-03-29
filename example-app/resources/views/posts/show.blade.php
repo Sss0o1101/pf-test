@@ -10,6 +10,11 @@
         {{-- <p class="back-link"><a href="/">Back</a></p> --}}
         {{-- <p class="back-link"><a href="/">Back</a></p> --}}
         <a href="{{ route('posts.edit', $post) }}">Edit</a>
+        <form action="{{ route('posts.destroy', $post) }}" method="post">
+            @method('delete')
+            @csrf
+            <button>Delete</button>
+        </form>
     <p>{!! nl2br(e($post->body)) !!}</p>
 
 
