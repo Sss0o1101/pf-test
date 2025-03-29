@@ -6,7 +6,10 @@
         My latest App
     </x-slot:title>
 
-    <h1>Posts</h1>
+    <h1>
+        Posts
+        <a href="{{ route('posts.create') }}">Add New Post</a>
+    </h1>
         <ul>
             {{-- @foreach ($posts as $post)
                 <li>{{ $post }}</li>
