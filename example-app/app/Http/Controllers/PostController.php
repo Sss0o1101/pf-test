@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
@@ -21,6 +22,7 @@ class PostController extends Controller
         return view('index')->with(['posts' => $posts]);
     }
 
+
     public function show(Post $post) {   //Implicit Binding は、URL の一部をパラメータ化している
 
         // $posts = [
@@ -35,9 +37,49 @@ class PostController extends Controller
 
     }
 
+
     public function create() {
         return view('posts.create');
     }
 
-    
+
+    public function store(PostRequest $request) {
+        // $request->validate([                               //validate は、リクエストのバリデーションを行う
+        //     'title' => 'required',
+        //     'body' => 'required|min:5',
+        // ]);
+
+        $post = new Post();
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+        return redirect()->route('posts.index');
+    }
+
+
+    public function edit(Post $post) {
+        return view('posts.edit')->with(['post' => $post]);
+    }
+
+
+    public function update(PostRequest $request, Post $post) {
+        // $request->validate([
+        //     'title' => 'required',
+        //     'body' => 'required|min:5',
+        // ]);
+
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+
+        return redirect()->route('posts.show', $post);
+    }
+
+
+
+
+
+
+
+
 }

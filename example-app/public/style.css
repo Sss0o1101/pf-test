@@ -29,3 +29,8 @@ textarea {
     box-sizing: border-box;
 
 }
+
+.error-message {
+    margin: 4px 0 0;
+    color: red;
+}
