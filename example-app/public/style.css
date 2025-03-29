@@ -9,6 +9,23 @@ h1 {
     font-size: 20px;
 }
 
+h1 a {
+    font-size: 16px;
+    font-weight: normal;
+}
+
 .back-link {
     text-align: right;
+}
+
+form div + div {
+    margin-top: 8px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+
 }
