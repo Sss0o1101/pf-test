@@ -14,3 +14,4 @@ Route::get('/', [PostController::class, 'index'])->name('posts.index');
 //Route::resource は、リソースコントローラーを定義する。
 //except は、index メソッドを除外する。
 Route::resource('posts', PostController::class)->except(['index']);
+
