@@ -49,15 +49,15 @@ class PostController extends Controller
         //     'body' => 'required|min:5',
         // ]);
 
-        $post = new Post();
-        $post->title = $request->title;
-        $post->body = $request->body;
-        $post->save();
+        $post = new Post();                //Post モデルのインスタンスを作成する
+        $post->title = $request->title;    //リクエストのタイトルを保存する
+        $post->body = $request->body;      //リクエストの本文を保存する
+        $post->save();                     //データベースに保存する
         return redirect()->route('posts.index');
     }
 
 
-    public function edit(Post $post) {
+    public function edit(Post $post) {   //Implicit Binding は、URL の一部をパラメータ化している
         return view('posts.edit')->with(['post' => $post]);
     }
 
@@ -68,9 +68,9 @@ class PostController extends Controller
         //     'body' => 'required|min:5',
         // ]);
 
-        $post->title = $request->title;
-        $post->body = $request->body;
-        $post->save();
+        $post->title = $request->title;    //リクエストのタイトルを保存する
+        $post->body = $request->body;      //リクエストの本文を保存する
+        $post->save();                     //データベースに保存する
 
         return redirect()->route('posts.show', $post);
     }
