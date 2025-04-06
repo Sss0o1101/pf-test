@@ -17,7 +17,7 @@
             <button>Delete</button>
         </form>
     </h1>
-    <p>{!! nl2br(e($post->body)) !!}</p>
+    <p>{!! nl2br(e($post->body)) !!}</p>  {{-- nl2br は、改行を <br> に変換する --}}
 
 
     <p class="back-link"><a href="{{ route('posts.index')}}">Back</a></p>
@@ -65,6 +65,3 @@
 
 </body>
 </html> --}}
-
-
-
