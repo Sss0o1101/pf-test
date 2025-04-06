@@ -11,7 +11,7 @@ class PostRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return true;   // trueに変更する。 true は、認証が不要なことを示す。
     }
 
     /**
