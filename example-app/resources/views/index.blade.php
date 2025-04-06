@@ -25,7 +25,7 @@
                 <li>No posts found!</li>
             @endforelse
 
-            
+
         </ul>
 
 </x-layout>
