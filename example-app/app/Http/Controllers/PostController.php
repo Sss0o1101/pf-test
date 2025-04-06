@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
-use App\Http\Requests\PostRequest;
+use App\Models\Post;                //Post モデルをインポートする
+use App\Http\Requests\PostRequest;  //PostRequest をインポートする
 
 class PostController extends Controller
 {
@@ -32,7 +32,7 @@ class PostController extends Controller
         // ];
 
         // $post = Post::find($id);
-        //$post = Post::findOrFail($id);                       //findOrFail は、見つからない場合は 404 エラーを返す
+        //$post = Post::findOrFail($id);                     //findOrFail は、見つからない場合は 404 エラーを返す
         return view('posts.show')->with(['post' => $post]);  //posts フォルダの show ビューを表示する
 
     }
