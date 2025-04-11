@@ -62,7 +62,7 @@ class PostController extends Controller
     }
 
 
-    public function update(PostRequest $request, Post $post) {
+    public function update(PostRequest $request, Post $post) {  //PostRequest は、リクエストのバリデーションを行う  //Implicit Binding は、URL の一部をパラメータ化している
         // $request->validate([
         //     'title' => 'required',
         //     'body' => 'required|min:5',
