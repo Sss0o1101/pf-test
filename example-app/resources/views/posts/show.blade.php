@@ -30,7 +30,7 @@
     @forelse ($post->comments as $comment)
         <li>
             {{ $comment->body }}
-            <form method="post" action="{{ route('posts.comments.destroy', [$post, $comment]) }}">  {{-- コメントを削除するためのルーティング --[$post, $comment] は、コメントを削除するためのルーティングの引数 --}}
+            <form method="post" action="{{ route('posts.comments.destroy', [$post, $comment]) }}" class="comment-delete-form">  {{-- コメントを削除するためのルーティング --[$post, $comment] は、コメントを削除するためのルーティングの引数 --}}
                 @csrf
                 @method('DELETE')
                 <button>Delete</button>
@@ -78,6 +78,40 @@
 
             form.submit();
         });
+
+        // const deleteCommentForms = document.querySelectorAll('.delete-comment-form');
+        // deleteCommentForms.forEach(function(form) {
+        //     form.addEventListener('submit', function(e) {
+        //         e.preventDefault();
+        //         if (confirm('Sure?') === false) {
+        //             return;
+        //         }
+
+        //         form.submit();
+        //     });
+        // });
+
+        const commentForms = document.querySelectorAll('.comment-delete-form');
+
+        commentForms.forEach((commentForm) => {
+            commentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (confirm('Sure?') === false) {
+                    return;
+                }
+
+                commentForm.submit();
+            });
+        });
+
+
+
+
+
+
+
+
+
     </script>
 
 </x-layout>
