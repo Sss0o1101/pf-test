@@ -40,6 +40,9 @@
         @csrf
         <div>
             <input type="text" name="body">  {{-- 送信したデータを受け取る際には、名前が必要 --}}
+            @error('body')
+                <p class="error">{{ $message }}</p>  {{-- エラーメッセージを表示 --}}
+            @enderror
         </div>
         <div>
             <button>Add</button>
