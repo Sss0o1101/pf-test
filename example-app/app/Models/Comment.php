@@ -15,4 +15,11 @@ class Comment extends Model
     // {
     //     return $this->belongsTo(Post::class);
     // }
+
+
+    // $comment->post
+    // コメントが属する投稿を取得する
+    public function post() {
+        return $this->belongsTo(Post::class);
+    }
 }
