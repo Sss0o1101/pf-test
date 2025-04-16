@@ -25,6 +25,10 @@ class CommentController extends Controller
         return redirect()->route('posts.show', $post);
     }
 
+
+    /**
+     * コメントを削除
+     */
     public function destroy(Post $post, Comment $comment) //implicity model binding で、Post $post, Comment $comment を受け取る
     {
         $comment->delete();
