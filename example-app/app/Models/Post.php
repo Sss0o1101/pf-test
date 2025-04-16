@@ -13,7 +13,7 @@ class Post extends Model
 
     //Post モデルと Comment モデルの関係を定義する
 
-    // $post->comments 
+    // $post->comments
     public function comments() {
         return $this->hasMany(Comment::class);
     }
@@ -23,3 +23,4 @@ class Post extends Model
 
 
 }
+
