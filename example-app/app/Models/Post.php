@@ -10,4 +10,16 @@ class Post extends Model
         'title',
         'body',
     ];
+
+    //Post モデルと Comment モデルの関係を定義する
+
+    // $post->comments 
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
+
+
+
+
+
 }
