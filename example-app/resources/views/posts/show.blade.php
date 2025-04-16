@@ -28,7 +28,14 @@
     <h2>Comments</h2>
     <ul>
     @forelse ($post->comments as $comment)
-        <li>{{ $comment->body }}</li>
+        <li>
+            {{ $comment->body }}
+            <form method="post" action="{{ route('posts.comments.destroy', [$post, $comment]) }}">  {{-- コメントを削除するためのルーティング --[$post, $comment] は、コメントを削除するためのルーティングの引数 --}}
+                @csrf
+                @method('DELETE')
+                <button>Delete</button>
+            </form>
+        </li>
     @empty
         <li>No comments yet</li>
     @endforelse
