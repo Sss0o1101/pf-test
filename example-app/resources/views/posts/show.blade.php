@@ -34,6 +34,20 @@
     @endforelse
     </ul>
 
+    {{-- コメントを追加するためのフォームを設置 --}}
+    <h2>Add Comment</h2>
+    <form method="post" action="{{ route('posts.comments.store', $post) }}">
+        @csrf
+        <div>
+            <input type="text" name="body">  {{-- 送信したデータを受け取る際には、名前が必要 --}}
+        </div>
+        <div>
+            <button>Add</button>
+        </div>
+    </form>
+
+
+
     <p class="back-link"><a href="{{ route('posts.index')}}">Back</a></p>
 
     <script>
