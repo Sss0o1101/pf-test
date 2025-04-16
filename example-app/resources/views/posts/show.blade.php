@@ -19,6 +19,21 @@
     </h1>
     <p>{!! nl2br(e($post->body)) !!}</p>  {{-- nl2br は、改行を <br> に変換する --}}
 
+
+    {{-- <h2>Comments</h2>
+    @foreach ($post->comments as $comment)
+        <p>{{ $comment->body }}</p>
+    @endforeach --}}
+
+    <h2>Comments</h2>
+    <ul>
+    @forelse ($post->comments as $comment)
+        <li>{{ $comment->body }}</li>
+    @empty
+        <li>No comments yet</li>
+    @endforelse
+    </ul>
+
     <p class="back-link"><a href="{{ route('posts.index')}}">Back</a></p>
 
     <script>
