@@ -56,8 +56,6 @@
         </div>
     </form>
 
-
-
     <p class="back-link"><a href="{{ route('posts.index')}}">Back</a></p>
 
     <script>
