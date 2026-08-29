@@ -6,6 +6,7 @@
         My latest App
     </x-slot:title>
 
+
     <h1>
         Posts
         <a href="{{ route('posts.create') }}">Add New Post</a>
@@ -61,3 +62,7 @@
 
 </body>
 </html> --}}
+
+
+
+
