@@ -10,8 +10,8 @@
 
     <h1>Edit post</h1>
     <form method="post" action="{{ route('posts.update', $post) }}">
-        @method('patch')  {{-- これを忘れると、CSRF トークンが一致しないというエラーが出る --}}
-        @csrf  {{-- これを忘れると、CSRF トークンが一致しないというエラーが出る --}}
+        @method('patch')  {{-- patch は、部分更新を行う --}}
+        @csrf  {{-- csrf は、CSRF トークンを生成する --}}
         <div>
             <label>
                 Title
