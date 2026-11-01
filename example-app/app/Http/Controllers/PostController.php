@@ -128,5 +128,5 @@ class PostController extends Controller
 // return view('posts.show')->with('post', $post);
 
 // これらの書き方は、同じ意味です。
-// どれを使うかは、好みの問題です。
-// どれを使うかは、好みの問題です。
+
+
